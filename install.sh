@@ -68,7 +68,7 @@ pacstrap /mnt $packages
 genfstab -U /mnt >> /mnt/etc/fstab
 
 # Chroot
-curl -L JustinCardona.github.io/chroot.sh > chroot.sh
+curl -L https://raw.githubusercontent.com/JustinCardona/archLinuxInstaller/main/chroot.sh > chroot.sh
 echo "rootp=$dev" | cat - chroot.sh > temp && mv temp chroot.sh
 echo "boot_state=$boot_state" | cat - chroot.sh > temp && mv temp chroot.sh
 mv chroot.sh /mnt
